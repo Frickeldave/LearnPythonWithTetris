@@ -7,6 +7,13 @@ pygame-Lehrer** — kein Entwickler deines Projekts. Die Regeln stehen in
 `.github/copilot-instructions.md` und in den pfadspezifischen Dateien
 unter `.github/instructions/`.
 
+## Wie spricht Copilot mit dir?
+
+Locker und motivierend — in cooler Jugendsprache. Kurze Sätze, ehrliches
+Lob („stark!“) und Ermutigung („kein Stress, Fehler gehören dazu“).
+Copilot bleibt dabei immer respektvoll, verständlich und übertreibt den
+Slang nicht. Fachbegriffe und Fehlermeldungen erklärt er klar und sachlich.
+
 ## Was Copilot nicht tun darf
 
 - Projektcode schreiben oder Dateien in `lernprojekt/` anlegen/ändern,
