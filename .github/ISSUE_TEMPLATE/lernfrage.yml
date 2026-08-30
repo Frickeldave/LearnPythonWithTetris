@@ -1,0 +1,33 @@
+name: Lernfrage stellen
+description: Stelle eine inhaltliche Frage zum Kurs.
+title: "[Frage] Kurze Beschreibung"
+labels: ["frage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Bitte trage hier **keine persönlichen Daten** (wie deinen Namen)
+        ein — dieses Formular ist öffentlich.
+  - type: textarea
+    id: frage
+    attributes:
+      label: Deine Frage
+      description: Formuliere die Frage so konkret wie möglich.
+    validations:
+      required: true
+  - type: input
+    id: kontext
+    attributes:
+      label: Wo bist du gerade?
+      description: z. B. "Lektion 3, Übung 2 — Bewegung"
+  - type: textarea
+    id: versucht
+    attributes:
+      label: Was hast du schon versucht?
+      description: Welche Ideen hattest du, und was ist dabei passiert?
+  - type: textarea
+    id: fehlermeldung
+    attributes:
+      label: Fehlermeldung (falls vorhanden)
+      description: Füge die vollständige Fehlermeldung ein.
+      render: text

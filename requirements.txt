@@ -1,0 +1,6 @@
+# Abhängigkeiten für den Blockfall-Kurs.
+#
+# Installation (in der aktiven virtuellen Umgebung):
+#     python -m pip install -r requirements.txt
+
+pygame>=2.5

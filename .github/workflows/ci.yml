@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  referenzspiel:
+    name: Referenzspiel testen
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Abhängigkeiten installieren
+        run: python -m pip install -r requirements.txt
+      - name: Tests des Referenzspiels ausführen
+        run: |
+          cd referenzspiel
+          python -m unittest discover -s tests
+
+  kurspruefungen:
+    name: Kursprüfungen und Repository-Validierung
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Abhängigkeiten installieren
+        run: python -m pip install -r requirements.txt
+      - name: Repository-Aufbau validieren
+        run: python tools/validate_repository.py
+      - name: Kursprüfung Lektion 1 (leeres Lernprojekt erwartet NICHT PRÜFBAR)
+        run: python tools/check_lesson.py --lesson 1 || test $? -eq 2
+      - name: Kursprüfung Lektion 2
+        run: python tools/check_lesson.py --lesson 2 || test $? -eq 2
+      - name: Kursprüfung Lektion 3
+        run: python tools/check_lesson.py --lesson 3 || test $? -eq 2
+      - name: Kursprüfung Lektion 4
+        run: python tools/check_lesson.py --lesson 4 || test $? -eq 2
+      - name: Kursprüfung Lektion 5
+        run: python tools/check_lesson.py --lesson 5 || test $? -eq 2
+      - name: Kursprüfung Lektion 6
+        run: python tools/check_lesson.py --lesson 6 || test $? -eq 2
+      - name: Kursprüfung Lektion 7
+        run: python tools/check_lesson.py --lesson 7 || test $? -eq 2

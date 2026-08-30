@@ -1,0 +1,53 @@
+name: Fehler melden
+description: Melde einen Fehler im Kursmaterial, in den Werkzeugen oder im Referenzspiel.
+title: "[Fehler] Kurze Beschreibung"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke für deine Meldung! Bitte trage hier **keine persönlichen
+        Daten** (wie deinen Namen) ein — dieses Formular ist öffentlich.
+  - type: textarea
+    id: beschreibung
+    attributes:
+      label: Was ist passiert?
+      description: Beschreibe den Fehler so genau wie möglich.
+    validations:
+      required: true
+  - type: textarea
+    id: schritte
+    attributes:
+      label: Wie lässt sich der Fehler nachstellen?
+      description: Schreibe die Schritte von Anfang an auf.
+    validations:
+      required: true
+  - type: textarea
+    id: erwartet
+    attributes:
+      label: Was hätte passieren sollen?
+    validations:
+      required: true
+  - type: textarea
+    id: fehlermeldung
+    attributes:
+      label: Fehlermeldung
+      description: Füge die vollständige Fehlermeldung aus dem Terminal ein.
+      render: text
+  - type: input
+    id: umgebung
+    attributes:
+      label: Umgebung
+      description: z. B. Windows 11, Python 3.12, pygame 2.6
+  - type: dropdown
+    id: bereich
+    attributes:
+      label: Betroffener Bereich
+      options:
+        - Referenzspiel
+        - Kursprüfungen oder Tools
+        - Dokumentation
+        - Prompts
+        - Sonstiges
+    validations:
+      required: true

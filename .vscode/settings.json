@@ -1,0 +1,13 @@
+{
+  // Im normalen Lernbetrieb wird das Referenzspiel in der Dateiansicht
+  // und in der Suche ausgeblendet. Das ist nur eine Hilfestellung und
+  // KEINE Sicherheitsfunktion. Kursverantwortliche können die Einträge
+  // jederzeit entfernen oder über "Dateien ausschließen" wieder sichtbar
+  // machen. Das Repository bleibt auch ohne Visual Studio Code nutzbar.
+  "files.exclude": {
+    "referenzspiel": true
+  },
+  "search.exclude": {
+    "referenzspiel": true
+  }
+}
