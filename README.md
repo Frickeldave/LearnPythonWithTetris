@@ -39,12 +39,12 @@ Für Jugendliche mit grundlegenden Python-Kenntnissen. Du brauchst:
 | Lektion 7 | Tests, Aufräumen, README, Abschlussprüfung |
 
 Pro Lektion: 75–105 Minuten Basiszeit, höchstens 12 Stunden gesamt.
-Bonusaufgaben zählen nicht dazu. Details: `docs/KURSPLAN.md`.
+Bonusaufgaben zählen nicht dazu. Details: [docs/KURSPLAN.md](docs/KURSPLAN.md).
 
 ## Voraussetzungen und Einrichtung
 
 Du brauchst Python ab 3.10 und pygame. Die Schritt-für-Schritt-Anleitung
-für Windows, macOS und Linux steht in `docs/EINRICHTUNG.md`.
+für Windows, macOS und Linux steht in [docs/EINRICHTUNG.md](docs/EINRICHTUNG.md).
 
 Kurzfassung:
 
@@ -76,25 +76,104 @@ ausschließlich über Verzeichnisse.
 > du dir selbst den Lernerfolg. In VS Code ist das Verzeichnis
 > standardmäßig ausgeblendet (Hilfestellung, keine Sicherheitsfunktion).
 
+## Erststart: Die Basics für absolute Anfänger
+
+Kein Stress — für den Start brauchst du **keine Erfahrung**. Folge einfach
+diesen sechs Schritten, dann startest du Phase 0:
+
+**1. Git installieren**
+
+Git ist das Werkzeug, mit dem du den Kurs auf deinen Computer holst.
+Lade es von <https://git-scm.com/downloads> herunter und installiere es —
+auf die Fragen kannst du einfach „Next" klicken. Ob es geklappt hat,
+prüfst du im Terminal:
+
+```text
+git --version
+```
+
+Erscheint eine Versionsnummer (z. B. `git version 2.4x.x`), passt alles.
+
+**2. Den Kurs herunterladen (git clone)**
+
+Öffne ein Terminal und gib ein:
+
+```text
+git clone https://github.com/Frickeldave/LearnPythonWithTetris.git
+```
+
+Die URL findest du auf der GitHub-Seite des Kurses: Klicke den grünen
+Button „Code" und kopiere die angezeigte Adresse. Du musst Git dafür
+nicht verstehen — ein einziger Befehl reicht. Danach wechselst du in den
+neuen Ordner:
+
+```text
+cd LearnPythonWithTetris
+```
+
+**3. VS Code öffnen und den Ordner auswählen**
+
+Öffne den Editor Visual Studio Code (falls er fehlt, installierst du ihn
+von <https://code.visualstudio.com/>). Wähle dann **Datei → Ordner
+öffnen …** und wähle den Ordner `LearnPythonWithTetris` aus.
+
+**4. Copilot Chat aktivieren**
+
+Klicke in der linken Seitenleiste auf das **Chat-Symbol** (GitHub
+Copilot Chat). Bist du noch nicht angemeldet, melde dich mit deinem
+GitHub-Konto an. Ab jetzt kannst du mit Copilot schreiben.
+
+**5. DeepSeek-Modell einrichten (Tokens)**
+
+Copilot läuft in diesem Kurs mit dem Modell von **DeepSeek**. Dafür
+brauchst du einen API-Schlüssel:
+
+1. Registriere dich bei <https://platform.deepseek.com/>.
+2. Lade Guthaben auf — dort heißen die Einheiten „Tokens".
+3. Erstelle einen API-Schlüssel (Menü „API Keys").
+4. Trage den Schlüssel in den VS-Code-Einstellungen ein, damit Copilot
+   das DeepSeek-Modell verwendet.
+
+Die genauen Menüpunkte hängen von deiner VS-Code-Version ab. Kommst du
+nicht weiter, hilft dir Copilot selbst — oder
+[docs/COPILOT-NUTZUNG.md](docs/COPILOT-NUTZUNG.md).
+
+**6. Den allerersten Prompt absetzen — Phase 0 startet**
+
+Öffne die Datei
+[`.github/prompts/00-vorbereitung.prompt.md`](.github/prompts/00-vorbereitung.prompt.md),
+kopiere ihren Inhalt in das Copilot-Chatfenster und schicke ihn ab. Damit
+startet **Phase 0**: Copilot prüft dein System, fragt nach deinem Namen
+und zeigt dir das Referenzspiel. Ab jetzt führt dich der Kurs Schritt
+für Schritt bis zu deinem eigenen Blockfall.
+
 ## So startest du den Kurs
 
-1. Richte dein System ein (`docs/EINRICHTUNG.md`).
-2. Starte den Prompt `00-vorbereitung.prompt.md` in `.github/prompts/`
-   mit GitHub Copilot: System prüfen, Namen nennen, Referenzspiel
-   einmal spielen.
-3. Danach: `00-kurs-start.prompt.md`, dann Lektion 1.
+Die ausführliche Schritt-für-Schritt-Anleitung für absolute Anfänger
+steht oben unter „Erststart". Hier die Kurzfassung:
+
+1. Richte dein System ein ([docs/EINRICHTUNG.md](docs/EINRICHTUNG.md)).
+2. Starte den Prompt
+   [`00-vorbereitung.prompt.md`](.github/prompts/00-vorbereitung.prompt.md)
+   in `.github/prompts/` mit GitHub Copilot: System prüfen, Namen nennen,
+   Referenzspiel einmal spielen.
+3. Danach: [`00-kurs-start.prompt.md`](.github/prompts/00-kurs-start.prompt.md),
+   dann Lektion 1.
 
 ## Prompt-Dateien verwenden
 
 Jede Übung hat eine eigene Prompt-Datei unter `.github/prompts/`
-(z. B. `L03-E02-spielfeldgrenzen.prompt.md`). Du kopierst sie ins
-Copilot-Chatfenster und arbeitest die Aufgabe **Schritt für Schritt**
-ab. Copilot ist dein Lehrer: Er erklärt, fragt und prüft — den Code
-schreibst **du**. Übersicht und Reihenfolge: `.github/prompts/README.md`.
+(z. B.
+[`L03-E02-spielfeldgrenzen.prompt.md`](.github/prompts/L03-E02-spielfeldgrenzen.prompt.md)).
+Du kopierst sie ins Copilot-Chatfenster und arbeitest die Aufgabe
+**Schritt für Schritt** ab. Copilot ist dein Lehrer: Er erklärt, fragt
+und prüft — den Code schreibst **du**. Übersicht und Reihenfolge:
+[`.github/prompts/README.md`](.github/prompts/README.md).
 
 ## Lektions-Gates
 
-Nach jeder Lektion prüft das Gate (Prompt `00-lektions-gate.prompt.md`),
+Nach jeder Lektion prüft das Gate (Prompt
+[`00-lektions-gate.prompt.md`](.github/prompts/00-lektions-gate.prompt.md)),
 ob du weiter darfst. Es kombiniert deine eigenen Tests
 (`python -m unittest discover -s tests` in `lernprojekt/`) mit der
 Kursprüfung:
@@ -115,19 +194,19 @@ aus dem Referenzspiel niemals etwas zeigen.
 
 ## Wichtige Dokumente
 
-- `docs/KURSPLAN.md` — Ablauf und Zeitplan
-- `docs/EINRICHTUNG.md` — Installation (Windows, macOS, Linux)
-- `docs/LERNENDENLEITFADEN.md` — so funktioniert der Kurs
-- `docs/KURSLEITUNGSLEITFADEN.md` — für Kursverantwortliche
-- `docs/COPILOT-NUTZUNG.md` — Copilot als Lehrer nutzen
-- `docs/SPIELREGELN.md` — Steuerung, Punkte, Level
-- `docs/ARCHITEKTUR.md` — Aufbau des Spiels (konzeptionell)
-- `docs/TECHNISCHER-VERTRAG.md` — Schnittstellen für die Kursprüfungen
-- `docs/TESTEN.md` — eigene Tests schreiben
-- `docs/FEHLERSUCHE.md` — häufige Probleme und Leitfragen
-- `docs/ABNAHMETEST.md` — die vollständige Basisabnahme
-- `docs/BONUSIDEEN.md` — freiwillige Erweiterungen
-- `LEARNING_JOURNAL.md` — dein Lernjournal
-- `PROGRESS.md` — deine Fortschrittsübersicht
+- [docs/KURSPLAN.md](docs/KURSPLAN.md) — Ablauf und Zeitplan
+- [docs/EINRICHTUNG.md](docs/EINRICHTUNG.md) — Installation (Windows, macOS, Linux)
+- [docs/LERNENDENLEITFADEN.md](docs/LERNENDENLEITFADEN.md) — so funktioniert der Kurs
+- [docs/KURSLEITUNGSLEITFADEN.md](docs/KURSLEITUNGSLEITFADEN.md) — für Kursverantwortliche
+- [docs/COPILOT-NUTZUNG.md](docs/COPILOT-NUTZUNG.md) — Copilot als Lehrer nutzen
+- [docs/SPIELREGELN.md](docs/SPIELREGELN.md) — Steuerung, Punkte, Level
+- [docs/ARCHITEKTUR.md](docs/ARCHITEKTUR.md) — Aufbau des Spiels (konzeptionell)
+- [docs/TECHNISCHER-VERTRAG.md](docs/TECHNISCHER-VERTRAG.md) — Schnittstellen für die Kursprüfungen
+- [docs/TESTEN.md](docs/TESTEN.md) — eigene Tests schreiben
+- [docs/FEHLERSUCHE.md](docs/FEHLERSUCHE.md) — häufige Probleme und Leitfragen
+- [docs/ABNAHMETEST.md](docs/ABNAHMETEST.md) — die vollständige Basisabnahme
+- [docs/BONUSIDEEN.md](docs/BONUSIDEEN.md) — freiwillige Erweiterungen
+- [LEARNING_JOURNAL.md](LEARNING_JOURNAL.md) — dein Lernjournal
+- [PROGRESS.md](PROGRESS.md) — deine Fortschrittsübersicht
 
 Viel Spaß — und viel Erfolg beim Bauen deines eigenen Blockfall!
